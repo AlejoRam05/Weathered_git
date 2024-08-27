@@ -1,0 +1,5 @@
+Ciudad: Lolo
+País: US
+Temperatura actual (Kelvin): 293.06 K
+Temperatura actual (Celsius): 19 °C
+Descripción del clima: broken clouds

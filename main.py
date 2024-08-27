@@ -1,13 +1,21 @@
-import requests
+from app.comandos import obtener_comandos
+from app.lectura import Wheather
 
-apikey = "82166bf06774ec63a7b31774f9652660"
-base_url = "http://api.openweathermap.org/data/2.5/weather?"
 
-def api_check():
-    city_name = input("Enter city name : ")
+def run_command():
+    args = obtener_comandos()
 
-    complete_url = base_url + "appid=" + apikey + "&q=" + city_name
-    response = requests.get(complete_url)
-    x = response.json() # Retorna un dict
-    return x
+    Wheather.data(args.name)
 
+    if args.c == "csv":
+        Wheather.export_csv(args.name)
+
+    elif args.c == "json":
+        Wheather.ver_json(args.name)
+
+    elif args.c == "txt":
+        Wheather.txt(args.name)
+
+
+if __name__ == "__main__":
+    run_command()
