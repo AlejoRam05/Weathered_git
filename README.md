@@ -1,16 +1,38 @@
-## Whethered_git
+# Weathered_git
 
-objetivo: Un programa en el cual se caracteriza por funcionar por medios de comandos en la terminal
+## Objetivo
 
-# version 0
-    - instalamos las dependencias para poder usar "requests" con 'pip install requests'
-        interactuamos con la API mediante la libreria "requests" lo utilizamos en la funcion api_check()
+Un programa que permite obtener información meteorológica de una ciudad específica mediante comandos en la terminal.
 
-    -- instalamos las dependencias para poder usar "pandas" con 'pip install pandas'
-        En el archivo lectura.py utilizamos la libreria pandas para mejor manejo de los datos extraidos mediante la cunsulta a la url
-        con los datos extraidos lo guardamos en un lista vacia para luego poder almacenarlos en un lugar especifico
+## Instalación y Uso
 
-    -- archivo txt.py
-        convertimos los datos optenidos (De interes) con la libreria pandas, lo convertimos a un archivo de texto(txt)
+### Versión 0
 
-# version 1
+1. **Instalación de dependencias:**
+
+   Para instalar requests, utiliza el siguiente comando:
+   
+bash
+   pip install requests
+
+   Para instalar `pandas`, utiliza el siguiente comando:
+bash
+   pip install pandas
+
+### Versión 1
+En esta versión, se han añadido comandos para elegir el formato de salida de la información meteorológica: CSV, JSON o TXT.
+
+CSV: Los datos se guardan en un archivo .csv.
+JSON: Los datos se guardan en un archivo .json.
+TXT: Los datos se guardan en un archivo .txt.
+
+2. **Metodo de uso:**
+
+    Para ejecutar el programa, utiliza el siguiente comando en la terminal:
+   
+bash    
+    python main.py -n <nombre_ciudad> -c <formato>
+
+    Donde:
+    -n o --name: Nombre de la ciudad para obtener la información meteorológica.
+    -c: Formato de la información: csv, json, txt.
