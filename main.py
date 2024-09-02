@@ -1,5 +1,6 @@
 from app.comandos import obtener_comandos
 from app.lectura import Wheather
+import pandas as pd
 
 
 def run_command():
@@ -9,6 +10,8 @@ def run_command():
 
     if args.c == "csv":
         Wheather.export_csv(args.name)
+        ver = pd.read_csv("outpout.csv")
+        print(ver)
 
     elif args.c == "json":
         Wheather.ver_json(args.name)
