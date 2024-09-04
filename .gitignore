@@ -2,3 +2,5 @@
 **/.outpout.csv
 **/.output.json
 **/.output.txt
+**/.env
+**/.gitignore

@@ -62,6 +62,8 @@ class Wheather:
                     )
                     txt_file.write(f"Descripción del clima: {elemento['info']}\n")
                     txt_file.write("\n")  # Añadir una línea en blanco entre registros
+            archivo = open("output.txt", encoding="utf-8")
+            print(archivo.read())
             print("Datos guardados en 'output.txt'.")
 
     @staticmethod
